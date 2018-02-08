@@ -1,0 +1,48 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks:
+        git_blacklist:
+            keywords:
+                - "die("
+                - "dump("
+                - "var_dump("
+                - "exit;"
+            triggered_by: [php]
+            regexp_type: G
+        jsonlint: ~
+        phpcpd:
+            directory: '.'
+            exclude: ['tests', 'vendor']
+            names_exclude: []
+            fuzzy: false
+            min_lines: 5
+            min_tokens: 70
+            triggered_by: ['php']
+        phpcs:
+            standard: "vendor/escapestudios/symfony2-coding-standard/Symfony2"
+            ignore_patterns: ['vendor/*']
+        phpcsfixer: ~
+        phpcsfixer2: ~
+        phplint: ~
+        phpparser: ~
+        phpspec: ~
+        phpunit: ~
+        phpversion: ~
+        securitychecker: ~
+        xmllint: ~
+        yamllint: ~
+    testsuites:
+        code_quality:
+            tasks:
+                - git_blacklist
+                - jsonlint
+                - phpcpd
+                - phpcs
+                - phplint
+                - phpparser
+                - phpspec
+                - phpversion
+                - securitychecker
+                - xmllint
+                - yamllint
