@@ -16,6 +16,7 @@ before_script:
   - sudo mv phpunit-6.2.phar /usr/local/bin/phpunit
 
 script: 
+  - cd /couchbase-driver
   - composer install
   - vendor/bin/grumphp run
   - vendor/bin/phpunit --coverage-text
