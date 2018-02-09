@@ -13,8 +13,11 @@ before_script:
   - sudo wget https://phar.phpunit.de/phpunit-6.2.phar
   - sudo chmod +x phpunit-6.2.phar
   - sudo mv phpunit-6.2.phar /usr/local/bin/phpunit
+  - sudo chmod +x ./codeclimate.sh
+  - composer install
 
 script: 
-  - composer install
   - vendor/bin/grumphp run
   - vendor/bin/phpunit --coverage-text
+
+after_script: sudo ./codeclimate.sh

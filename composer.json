@@ -29,6 +29,7 @@
         "sebastian/phpcpd": "^3.0",
         "escapestudios/symfony2-coding-standard": "^2.11",
         "jakub-onderka/php-parallel-lint": "^0.9.2",
-        "sensiolabs/security-checker": "^4.1"
+        "sensiolabs/security-checker": "^4.1",
+        "codeclimate/php-test-reporter": "^0.4.4"
     }
 }
