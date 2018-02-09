@@ -1,6 +1,6 @@
 <?php
 
-namespace CommonsPhp\CouchbaseDriver;
+namespace Prooofzizoo\CouchbaseDriver;
 
 /**
  * QueryBuilderTrait trait.

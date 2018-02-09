@@ -29,7 +29,7 @@ parameters:
         phpspec: ~
         phpunit: ~
         phpversion: ~
-        securitychecker: ~
+        #securitychecker: ~
         xmllint: ~
         yamllint: ~
     testsuites:
@@ -43,6 +43,6 @@ parameters:
                 - phpparser
                 - phpspec
                 - phpversion
-                - securitychecker
+                #- securitychecker
                 - xmllint
                 - yamllint

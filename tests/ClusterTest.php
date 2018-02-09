@@ -1,10 +1,10 @@
 <?php
 
-namespace CommonsPhp\CouchbaseDriver\Tests;
+namespace Prooofzizoo\CouchbaseDriver\Tests;
 
 use PHPUnit\Framework\TestCase;
-use CommonsPhp\CouchbaseDriver\Cluster;
-use CommonsPhp\CouchbaseDriver\Bucket;
+use Prooofzizoo\CouchbaseDriver\Cluster;
+use Prooofzizoo\CouchbaseDriver\Bucket;
 
 /**
  * ClusterTest class.
@@ -16,6 +16,11 @@ class ClusterTest extends TestCase
      */
     private $cluster;
 
+    /**
+     * Set up method.
+     *
+     * @return void
+     */
     public function setUp()
     {
         $this->cluster = new Cluster();

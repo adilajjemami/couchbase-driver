@@ -1,5 +1,5 @@
 {
-    "name": "commons-php/couchbase-driver",
+    "name": "prooofzizoo/couchbase-driver",
     "description": "A simple couchbase php driver",
     "type": "library",
     "authors": [
@@ -10,24 +10,24 @@
     ],
     "autoload": {
         "psr-4": {
-            "CommonsPhp\\CouchbaseDriver\\": "src/"
+            "Prooofzizoo\\CouchbaseDriver\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CommonsPhp\\CouchbaseDriver\\Tests\\": "tests/"
+            "Prooofzizoo\\CouchbaseDriver\\Tests\\": "tests/"
         }
     },
     "require": {
         "php": ">=5.6.0"
     },
     "require-dev": {
-        "phpro/grumphp": "^0.13.1",
-        "phpunit/phpunit": "^7.0",
+        "phpro/grumphp": "^0.11.6",
+        "phpunit/phpunit": "^6.4",
         "nikic/php-parser": "^3.1",
-        "phpspec/phpspec": "^4.3",
-        "sebastian/phpcpd": "^4.0",
-        "escapestudios/symfony2-coding-standard": "^3.0",
+        "phpspec/phpspec": ">=3.4 <4.3",
+        "sebastian/phpcpd": "^3.0",
+        "escapestudios/symfony2-coding-standard": "^2.11",
         "jakub-onderka/php-parallel-lint": "^0.9.2",
         "sensiolabs/security-checker": "^4.1"
     }

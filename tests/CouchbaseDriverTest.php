@@ -1,10 +1,10 @@
 <?php
 
-namespace CommonsPhp\CouchbaseDriver\Tests;
+namespace Prooofzizoo\CouchbaseDriver\Tests;
 
 use PHPUnit\Framework\TestCase;
-use CommonsPhp\CouchbaseDriver\CouchbaseDriver;
-use CommonsPhp\CouchbaseDriver\Cluster;
+use Prooofzizoo\CouchbaseDriver\CouchbaseDriver;
+use Prooofzizoo\CouchbaseDriver\Cluster;
 
 /**
  * CouchbaseDriverTest class.
