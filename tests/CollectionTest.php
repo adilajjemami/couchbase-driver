@@ -1,10 +1,10 @@
 <?php
 
-namespace CommonsPhp\CouchbaseDriver\Tests;
+namespace Prooofzizoo\CouchbaseDriver\Tests;
 
 use PHPUnit\Framework\TestCase;
-use CommonsPhp\CouchbaseDriver\Collection;
-use CommonsPhp\CouchbaseDriver\Bucket;
+use Prooofzizoo\CouchbaseDriver\Collection;
+use Prooofzizoo\CouchbaseDriver\Bucket;
 
 /**
  * CollectionTest class.

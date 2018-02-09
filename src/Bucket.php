@@ -1,6 +1,6 @@
 <?php
 
-namespace CommonsPhp\CouchbaseDriver;
+namespace Prooofzizoo\CouchbaseDriver;
 
 /**
  * Bucket class.
@@ -30,7 +30,8 @@ class Bucket
     /**
      * Construct method.
      *
-     * @param string $name
+     * @param string  $name
+     * @param Cluster $cluster
      */
     public function __construct(string $name, Cluster $cluster)
     {
