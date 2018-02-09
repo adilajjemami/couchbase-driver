@@ -5,7 +5,6 @@ php:
   - 7.2
 
 before_script:
-  - cd /tmp
   - pear install PHP_CodeSniffer
   - pear install phpDocumentor
   - sudo wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /php-cs-fixer
