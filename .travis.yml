@@ -20,6 +20,7 @@ before_script:
 
 script: 
   - vendor/bin/grumphp run
+  - vendor/bin/phpunit
   - vendor/bin/phpunit --coverage-text
 
 after_script: sudo ./codeclimate.sh
