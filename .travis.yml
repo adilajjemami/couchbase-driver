@@ -8,10 +8,10 @@ before_script:
   - cd /tmp
   - pear install PHP_CodeSniffer
   - pear install phpDocumentor
-  - wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /php-cs-fixer
+  - sudo wget http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -O /php-cs-fixer
   - sudo chmod +x /php-cs-fixer
   - sudo mv /php-cs-fixer /usr/local/bin/
-  - wget https://phar.phpunit.de/phpunit-6.2.phar
+  - sudo wget https://phar.phpunit.de/phpunit-6.2.phar
   - sudo chmod +x phpunit-6.2.phar
   - sudo mv phpunit-6.2.phar /usr/local/bin/phpunit
 
