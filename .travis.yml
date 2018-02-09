@@ -9,8 +9,17 @@ php:
   - 7.2
 
 before_script:
-  - composer install
+  - cd /tmp
+  - pear install PHP_CodeSniffer
+  - pear install phpDocumentor
+  - curl -L http://cs.sensiolabs.org/download/php-cs-fixer-v2.phar -o /php-cs-fixer
+  - chmod +x /php-cs-fixer
+  - mv /php-cs-fixer /usr/local/bin/
+  - wget https://phar.phpunit.de/phpunit-6.2.phar
+  - chmod +x phpunit-6.2.phar
+  - mv phpunit-6.2.phar /usr/local/bin/phpunit
 
 script: 
+  - composer install
   - vendor/bin/grumphp run
   - vendor/bin/phpunit --coverage-text
