@@ -70,9 +70,11 @@ class BucketTest extends TestCase
         $collections = ['collection1' => new Collection('collection1', $this->bucket)];
         $this->bucket->setCouchbaseBucket(null);
         $this->bucket->setName('bucket');
+        $this->bucket->setCluster($this->cluster);
         $this->bucket->setCollections($collections);
         $this->assertSame(null, $this->bucket->getCouchbaseBucket());
         $this->assertSame('bucket', $this->bucket->getName());
+        $this->assertSame($this->cluster, $this->bucket->getCluster());
         $this->assertSame($collections, $this->bucket->getCollections());
         $this->assertInstanceOf(Collection::class, $this->bucket->collection('collection1'));
         $this->assertSame($collections['collection1'], $this->bucket->collection('collection1'));

@@ -5,6 +5,7 @@ namespace Prooofzizoo\CouchbaseDriver\Tests;
 use PHPUnit\Framework\TestCase;
 use Prooofzizoo\CouchbaseDriver\CouchbaseDriver;
 use Prooofzizoo\CouchbaseDriver\Cluster;
+use Prooofzizoo\CouchbaseDriver\N1qlQuery;
 
 /**
  * CouchbaseDriverTest class.
@@ -17,6 +18,11 @@ class CouchbaseDriverTest extends TestCase
     private $cluster;
 
     /**
+     * @var N1qlQuery
+     */
+    private $n1qlQuery;
+
+    /**
      * Set up method.
      *
      * @return void
@@ -24,6 +30,7 @@ class CouchbaseDriverTest extends TestCase
     public function setUp()
     {
         $this->cluster = $this->createMock(Cluster::class);
+        $this->n1qlQuery = $this->createMock(N1qlQuery::class);
     }
 
     /**
@@ -49,7 +56,7 @@ class CouchbaseDriverTest extends TestCase
             ->method('init')
             ->willReturn($this->cluster);
 
-        CouchbaseDriver::setCluster($this->cluster->init('url'));
+        CouchbaseDriver::setCluster($this->cluster->init('url', $this->n1qlQuery));
         $this->assertSame($this->cluster, CouchbaseDriver::getCluster());
     }
 }

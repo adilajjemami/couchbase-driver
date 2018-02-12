@@ -1,4 +1,5 @@
 /vendor/
 /coverage/
 /build/
+/demos/
 .php_cs.cache
