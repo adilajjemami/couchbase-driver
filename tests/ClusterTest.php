@@ -4,6 +4,7 @@ namespace Prooofzizoo\CouchbaseDriver\Tests;
 
 use PHPUnit\Framework\TestCase;
 use Prooofzizoo\CouchbaseDriver\Cluster;
+use Prooofzizoo\CouchbaseDriver\N1qlQuery;
 use Prooofzizoo\CouchbaseDriver\Bucket;
 
 /**
@@ -17,6 +18,11 @@ class ClusterTest extends TestCase
     private $cluster;
 
     /**
+     * @var N1qlQuery
+     */
+    private $n1qlQuery;
+
+    /**
      * Set up method.
      *
      * @return void
@@ -24,6 +30,7 @@ class ClusterTest extends TestCase
     public function setUp()
     {
         $this->cluster = new Cluster();
+        $this->n1qlQuery = new N1qlQuery();
     }
 
     /**
@@ -45,7 +52,9 @@ class ClusterTest extends TestCase
     {
         $buckets = ['bucket1' => new Bucket('bucket1', $this->cluster)];
         $this->cluster->setCouchbaseCluster(null);
+        $this->cluster->setN1qlQuery($this->n1qlQuery);
         $this->cluster->setBuckets($buckets);
+        $this->assertSame($this->n1qlQuery, $this->cluster->getN1qlQuery());
         $this->assertSame(null, $this->cluster->getCouchbaseCluster());
         $this->assertSame($buckets, $this->cluster->getBuckets());
         $this->assertInstanceOf(Bucket::class, $this->cluster->bucket('bucket1'));

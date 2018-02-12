@@ -9,6 +9,8 @@ class Collection
 {
     use QueryBuilderTrait;
 
+    private const KEY_SEP = ':';
+
     /**
      * @var string
      */

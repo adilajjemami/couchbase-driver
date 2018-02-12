@@ -13,6 +13,11 @@ class Cluster
     private $couchbaseCluster;
 
     /**
+     * @var N1qlQuery;
+     */
+    protected $n1qlQuery;
+
+    /**
      * @var array
      */
     public $buckets = [];
@@ -20,15 +25,17 @@ class Cluster
     /**
      * Init cluster mthod.
      *
-     * @param string $url
+     * @param string    $url
+     * @param N1qlQuery $n1qlQuery
      *
      * @return Cluster
      *
      * @codeCoverageIgnore
      */
-    public function init(string $url)
+    public function init(string $url, N1qlQuery $n1qlQuery)
     {
-        $this->$couchbaseCluster = new \Couchbase\Cluster($url);
+        $this->couchbaseCluster = new \Couchbase\Cluster($url);
+        $this->n1qlQuery = $n1qlQuery;
 
         return $this;
     }
@@ -79,6 +86,30 @@ class Cluster
     public function setBuckets(array $buckets)
     {
         $this->buckets = $buckets;
+
+        return $this;
+    }
+
+    /**
+     * Get n1qlQuery method.
+     *
+     * @return N1qlQuery
+     */
+    public function getN1qlQuery()
+    {
+        return $this->n1qlQuery;
+    }
+
+    /**
+     * Set n1qlQuery method.
+     *
+     * @param N1qlQuery $n1qlQuery
+     *
+     * @return Cluster
+     */
+    public function setN1qlQuery(N1qlQuery $n1qlQuery)
+    {
+        $this->n1qlQuery = $n1qlQuery;
 
         return $this;
     }

@@ -112,6 +112,30 @@ class Bucket
     }
 
     /**
+     * Get cluster method.
+     *
+     * @return string
+     */
+    public function getCluster()
+    {
+        return $this->cluster;
+    }
+
+    /**
+     * Set cluster method.
+     *
+     * @param Cluster $cluster
+     *
+     * @return Bucket
+     */
+    public function setCluster(Cluster $cluster)
+    {
+        $this->cluster = $cluster;
+
+        return $this;
+    }
+
+    /**
      * Get couchbase bucket method.
      *
      * @return \Couchbase\Bucket
