@@ -29,8 +29,6 @@ class Cluster
      * @param N1qlQuery $n1qlQuery
      *
      * @return Cluster
-     *
-     * @codeCoverageIgnore
      */
     public function init(string $url, N1qlQuery $n1qlQuery)
     {
@@ -46,8 +44,6 @@ class Cluster
      * @param string $bucketName
      *
      * @return \Couchbase\Bucket
-     *
-     * @codeCoverageIgnore
      */
     public function open(string $bucketName)
     {
