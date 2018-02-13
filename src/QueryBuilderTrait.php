@@ -30,7 +30,7 @@ trait QueryBuilderTrait
     /**
      * @var array
      */
-    private $Orwheres = [];
+    private $orWheres = [];
 
     /**
      * @var array
@@ -307,12 +307,15 @@ trait QueryBuilderTrait
      */
     public function count()
     {
-        $this->queryString = 'SELECT COUNT(*) AS nbRows FROM '.$this->bucket->getName();
+        $this->queryString = 'SELECT COUNT(*) AS nbRows FROM '.$this->bucket->getName().' AS data';
         $this->queryString .= ' WHERE meta().id LIKE \''.$this->name.self::KEY_SEP.'%\'';
         $this->generateConditionsString();
         $this->generateLimitString();
 
-        return $this->executeQuery()[0]['nbRows'];
+        return array_map(
+            [$this, 'getData'],
+            $this->executeQuery()
+        );
     }
 
     /**
@@ -419,15 +422,12 @@ trait QueryBuilderTrait
      */
     public function healthCheck()
     {
-        $this->checkBucket();
+        $this->queryString = 'SELECT 1 AS data';
 
-        $queryString = 'SELECT 1';
-        $query = $this->bucket
-            ->getCluster()
-            ->getN1qlQuery()
-            ->fromString($queryString);
-
-        return $this->bucket->getCouchbaseBucket()->query($query, true);
+        return array_map(
+            [$this, 'getData'],
+            $this->executeQuery()
+        );
     }
 
     /**
@@ -513,8 +513,7 @@ trait QueryBuilderTrait
      */
     public function executeQuery()
     {
-        $this->checkBucket();
-        $this->query = $this->data['n1qlQuery']->fromString($this->data['queryString']);
+        $this->query = $this->bucket->getCluster()->getN1qlQuery()->fromString($this->queryString);
         $this->query->options = array_merge($this->query->options, $this->params);
         $result = $this->bucket->getCouchbaseBucket()->query($this->query, true);
 
