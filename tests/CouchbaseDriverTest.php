@@ -1,11 +1,11 @@
 <?php
 
-namespace Prooofzizoo\CouchbaseDriver\Tests;
+namespace AdilAJJEMAMI\CouchbaseDriver\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Prooofzizoo\CouchbaseDriver\CouchbaseDriver;
-use Prooofzizoo\CouchbaseDriver\Cluster;
-use Prooofzizoo\CouchbaseDriver\N1qlQuery;
+use AdilAJJEMAMI\CouchbaseDriver\CouchbaseDriver;
+use AdilAJJEMAMI\CouchbaseDriver\Cluster;
+use AdilAJJEMAMI\CouchbaseDriver\N1qlQuery;
 
 /**
  * CouchbaseDriverTest class.

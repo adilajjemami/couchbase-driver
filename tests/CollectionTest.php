@@ -1,12 +1,12 @@
 <?php
 
-namespace Prooofzizoo\CouchbaseDriver\Tests;
+namespace AdilAJJEMAMI\CouchbaseDriver\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Prooofzizoo\CouchbaseDriver\Collection;
-use Prooofzizoo\CouchbaseDriver\Bucket;
-use Prooofzizoo\CouchbaseDriver\Cluster;
-use Prooofzizoo\CouchbaseDriver\N1qlQuery;
+use AdilAJJEMAMI\CouchbaseDriver\Collection;
+use AdilAJJEMAMI\CouchbaseDriver\Bucket;
+use AdilAJJEMAMI\CouchbaseDriver\Cluster;
+use AdilAJJEMAMI\CouchbaseDriver\N1qlQuery;
 
 /**
  * CollectionTest class.
