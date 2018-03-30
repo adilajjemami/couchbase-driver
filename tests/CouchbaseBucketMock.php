@@ -1,6 +1,6 @@
 <?php
 
-namespace Prooofzizoo\CouchbaseDriver\Tests;
+namespace AdilAJJEMAMI\CouchbaseDriver\Tests;
 
 /**
  * CouchbaseBucketMock class.

@@ -1,6 +1,6 @@
 <?php
 
-namespace Prooofzizoo\CouchbaseDriver;
+namespace AdilAJJEMAMI\CouchbaseDriver;
 
 /**
  * CouchbaseDriver class.

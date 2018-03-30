@@ -1,5 +1,5 @@
 {
-    "name": "prooofzizoo/couchbase-driver",
+    "name": "adilajjemami/couchbase-driver",
     "description": "A simple couchbase php driver",
     "type": "library",
     "authors": [
@@ -10,12 +10,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Prooofzizoo\\CouchbaseDriver\\": "src/"
+            "AdilAJJEMAMI\\CouchbaseDriver\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Prooofzizoo\\CouchbaseDriver\\Tests\\": "tests/"
+            "AdilAJJEMAMI\\CouchbaseDriver\\Tests\\": "tests/"
         }
     },
     "require": {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Prooofzizoo\CouchbaseDriver\Tests;
+namespace AdilAJJEMAMI\CouchbaseDriver\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Prooofzizoo\CouchbaseDriver\Bucket;
-use Prooofzizoo\CouchbaseDriver\Collection;
-use Prooofzizoo\CouchbaseDriver\Cluster;
+use AdilAJJEMAMI\CouchbaseDriver\Bucket;
+use AdilAJJEMAMI\CouchbaseDriver\Collection;
+use AdilAJJEMAMI\CouchbaseDriver\Cluster;
 
 /**
  * BucketTest class.
